@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylezonghe01.css">
+    <script type="text/javascript" src="jquery.js"></script>
+
+</head>
+<body>
+    <div id="denglv01">
+            <header class="hd1">
+            <h4>用户登录</h4>
+            </header>
+            <table class="biaoge01"><!--这是一个表格-->
+                <tr><!--这是第一行-->
+                    <td>用户名</td>
+                    <td>
+                        <input type="text" id="name" style="width: 70%;height: 50%;">
+                    </td>
+                </tr>
+        
+                <tr><!--这是第二行-->
+                    <td>密码</td>
+                    <td>
+                        <input type="text" id="pass" style="width: 70%;height: 50%;">
+                    </td>
+                </tr>
+        
+                <tr><!--这是第三行-->
+                    <td colspan="2" ><button type="submit" class="denglv" style="width: 70%;height: 60%;" onclick="yanzheng()">确认登录</button></td>
+                </tr>
+        
+                <tr ><!--这是第四行-->
+                    <td colspan="2" ><a href="#zhuce02" title="用户注册" target="_blank" style="width: 30%;">用户注册</a></td>
+                </tr>
+            </table>
+    </div>
+
+    <div id="zhuce02">
+            <header class="hd2">
+            <h4>用户信息填写</h4>
+            </header>
+            <table class="biaoge02"><!--这是表格框架 -->
+                <tr><!--这是一行-->
+                    <td>账户</td><!--这是这一行中的左边单元格-->
+                    <td><input type="text" id="name" style="width: 70%;height: 100%;"></td><!--这是这一行中的右边单元格-->
+                </tr>
+        
+                <tr><!--这是第二行-->
+                    <td>密码</td>
+                    <td><input type="password" id="pass" style="width: 70%;height: 50%;"></td>
+                </tr>
+        
+                <tr><!--这是一行-->
+                    <td>姓名</td><!--这是这一行中的左边单元格-->
+                    <td><input type="text" value="姓名" style="width: 70%;height: 100%;"></td><!--这是这一行中的右边单元格-->
+                </tr>
+        
+                <tr><!--这是第二行-->
+                    <td>学号</td>
+                    <td><input type="text" value="学号" style="width: 70%;height: 50%;"></td>
+                </tr>
+                
+                <tr><!--这是第三行-->
+                    <td>学院</td>
+                    <td>
+                        <select style="width: 70%;height: 50%;">
+                            <option>--请选择学院--</option>
+                            <option>信息与软件工程学院</option>
+                            <option>数学学院</option>
+                            <option>物理学院</option>
+                        </select>
+                    </td>
+                </tr>
+        
+                <tr><!--这是第四行-->
+                    <td>邮箱</td>
+                    <td>
+                        <input type="text" value="@qq.com/@outlook.com" style="width: 70%;height: 50%;">
+                    </td>
+                </tr>
+        
+                <tr><!--这是第五行-->
+                    <td>是否有篮球基础</td>
+                    <td>
+                        <input type="radio" name="danxuan" id="shi"><label for="shi">是</label>
+                        <input type="radio" name="danxuan" id="fou"><label for="fou">否</label>
+                    </td>
+                </tr>
+        
+                <tr><!--这是第六行-->
+                    <td>喜欢的球员位置</td>
+                    <td>
+                        <ul>
+                        <li><input type="checkbox" name="weizhi" id="a"><label for="a">1号位:组织后卫</label></li>
+                        <li><input type="checkbox" name="weizhi" id="b"><label for="b">2号位:得分后卫</label></li>
+                        <li><input type="checkbox" name="weizhi" id="c"><label for="c">3号位:小前锋</label></li>
+                        <li><input type="checkbox" name="weizhi" id="d"><label for="d">4号位:大前锋</label></li>
+                        <li><input type="checkbox" name="weizhi" id="e"><label for="e">5号位:中锋</label></li>
+                        </ul>
+                    </td>
+                </tr>
+        
+                <tr><!--这是第七行-->
+                    <td colspan="2"><a href="#" onclick="chucun()" target="_blank" style="width: 50%; height:45px; " class="zhuce" >确认注册并登录</a></td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <script>
+            function yanzheng(){
+        if(localStorage.getItem(document.getElementById("name").value)==document.getElementById("pass").value){
+             alert("登录成功");
+             if(document.getElementById("pass").value=="123"){
+                window.open("综合页面02.html");
+             }
+        }else{
+             alert("账户或密码错误")
+        }
+        }
+            function chucun(){
+            var storage=window.localStorage;
+            storage.setItem(document.getElementById("name").value,document.getElementById("pass").value);
+            alert("注册成功");
+            if(document.getElementById("pass").value=="123"){
+                window.open("综合页面02.html");
+             }
+        }
+                $(document).ready(function(){
+                $('a').click(function(e){
+                    e.preventDefault();
+                    $('#denglv01').toggleClass('move');
+                    $('#zhuce02').toggleClass('move');
+                });
+            });
+        </script>
+</body>
+</html>

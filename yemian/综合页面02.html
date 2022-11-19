@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylezonghe02.css">
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<article id="diyiye">
+    <div id="left"><img src="库里.jpg" width="400px"></div>
+    <div id="daohang">
+        <div class="gerenxinxi"><a href="#ziwojieshao" width="600px">自我介绍</a></div>
+    </div>
+    <div id="right"><img src="詹姆斯1.png" width="400px"></div>
+</article>
+
+
+<article id="ziwojieshao">
+    <header class="header">
+        <h1>
+            自我介绍
+        </h1>
+    </header>
+
+    <div id="main">
+        <div class="bianlan">
+            <div class="zhaopian">
+            <h3 style="color: rgb(248, 219, 170);">我的自拍</h3>
+            <img src="自拍.jpg" id="zipai" >
+            </div>
+
+            <div class="jibenxinxi">
+            <h3>姓名: 秦瑞阳</h3>
+            <br>
+            <h3>性别：男</h3>
+            <br>
+            <h3>班级：0917班</h3>
+            <br>
+            <h3>QQ：1637190240</h3>
+            </div>
+        </div>
+
+        <div class="zhulan">
+        <h2>我的爱好</h2>
+        <table>
+        <tr style="background-color: rgb(215, 233, 249);">
+            <td><h4>爱好广泛，喜欢运动和音乐，参加班级篮球赛，喜欢的球星是Stephen Curry，也比较喜欢乒乓球、羽毛球和游泳。</h4></td>
+            <td><img src="lanqiu(1).png" height="200"></td>
+        </tr>
+        <tr>
+            <td><img src="yinyue.webp" height="200px"></td>
+            <td><h4>喜欢的音乐类型多样，流行音乐和hip-hop说唱都感兴趣。</h4></td>
+        </tr>
+        <tr style="background-color: rgb(215, 233, 249);">
+            <td><h4>我的特长是书法，多次在全国比赛中获奖。</h4></td>
+            <td><img src="shufa.jpg" height="200px"></td>
+        </tr>
+        </table>
+        </div>
+    </div>
+</article>
+
+<script>
+    function fun01(){
+        alert("功能暂未开放");
+    }
+    $(document).ready(function(){
+                $('a').click(function(e){
+                    e.preventDefault();
+                    $('#diyiye').toggleClass('move');
+                    $('#ziwojieshao').toggleClass('move');
+                });
+            });
+</script>
+
+</body>
+</html>
