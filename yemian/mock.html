@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shiyongmock</title>
+    <script src="mock-min.js"></script>
+    <script >
+        var data=Mock.mock({
+		    "users|5-10": [{   // 随机生成5到10个数组元素
+		        'name': '@cname',  // 中文名称
+		        'id|+1': 1,    // 属性值自动加 1，初始值为1
+		        'age|18-25': 0,   // 18至28以内随机整数, 0只是用来确定类型
+		        'city': '@city(true)',   // 中国城市
+		    }]
+		});
+        console.log(data);
+    </script>
+</head>
+<body>
+   
+    <h3>通过控制台console点击object的user查看</h3>
+    
+
+</body>
+</html>

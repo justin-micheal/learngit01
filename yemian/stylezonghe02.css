@@ -94,7 +94,18 @@ a{text-decoration:none;color:rgb(187, 187, 248);font-size:30px;}
 
 }
 
+.tarenxinxi {
+    background-color: rgb(228, 222, 125);;
+    position:absolute;
+    width:700px;
+    height: 80px;
+    top:350px;
+    text-align: center;
+    line-height: 90px;
+    font-weight: 800;
+    font-size: larger;
 
+}
 
 
 
